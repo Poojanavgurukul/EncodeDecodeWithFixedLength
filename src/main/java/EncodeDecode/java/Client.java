@@ -1,6 +1,7 @@
 package EncodeDecode.java;
 
 import java.io.FileNotFoundException;
+import java.util.Map;
 import java.util.Set;
 
 public class Client {
@@ -17,12 +18,14 @@ public class Client {
         int bits = bitsCounter.getBits(uniqueCharacters.size());
         System.out.println(bits);
 
-        BinaryTableInRequiredBits binaryTableInRequiredBits = new BinaryTableInRequiredBits();
-        System.out.println(binaryTableInRequiredBits.generateBinaryTable(bits, uniqueCharacters));
+        BinaryTableInBits binaryTableInBits = new BinaryTableInBits();
+        System.out.println(binaryTableInBits.generateBinaryTable(bits, uniqueCharacters));
 
         TableWriter tableWriter = new TableWriter();
-        tableWriter.write(binaryTableInRequiredBits.generateBinaryTable(bits, uniqueCharacters));
+        tableWriter.write(binaryTableInBits.generateBinaryTable(bits, uniqueCharacters));
 
-
+        Encode encode=new Encode();
+        Map<Character, String> table = binaryTableInBits.generateBinaryTable(bits, uniqueCharacter.getUniqueCharacters("RAHUL"));
+        System.out.println(encode.encoder("RAHUL", table));
     }
 }

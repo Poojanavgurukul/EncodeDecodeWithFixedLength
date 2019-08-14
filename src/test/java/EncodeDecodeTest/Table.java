@@ -1,6 +1,6 @@
 package EncodeDecodeTest;
 
-import EncodeDecode.java.BinaryTableInRequiredBits;
+import EncodeDecode.java.BinaryTableInBits;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -13,13 +13,13 @@ import static org.junit.Assert.assertEquals;
 public class Table {
     @Test public void itShouldGiveBinaryTableOfUniqueCharacterInParticularBits(){
         HashSet uniqueCharacters = new HashSet<>(Arrays.asList('r', 'a', 'h', 'u', 'l'));
-        BinaryTableInRequiredBits binaryTableInRequiredBits =new BinaryTableInRequiredBits();
+        BinaryTableInBits binaryTableInBits =new BinaryTableInBits();
         Map<java.lang.Character, String> expected = new HashMap<>();
         expected.put('a', "000");
         expected.put('r', "001");
         expected.put('u', "010");
         expected.put('h', "011");
         expected.put('l', "100");
-        assertEquals(expected, binaryTableInRequiredBits.generateBinaryTable(3, uniqueCharacters));
+        assertEquals(expected, binaryTableInBits.generateBinaryTable(3, uniqueCharacters));
     }
 }

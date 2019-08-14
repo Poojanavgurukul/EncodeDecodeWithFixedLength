@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 @SuppressWarnings("unchecked")
-public class BinaryTableInRequiredBits {
+public class BinaryTableInBits {
     public Map<Character, String> generateBinaryTable(int numberOfBitsRequired, Set<Character> uniqueCharacters) {
         Map<Character, String> table = new HashMap();
         int bin = 0;
