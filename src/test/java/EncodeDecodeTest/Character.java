@@ -12,4 +12,9 @@ public class Character {
       UniqueCharacter uniqueCharacter=new UniqueCharacter();
       assertEquals(expected,uniqueCharacter.getUniqueCharater("p").size());
     }
+    @Test public void itShouldHaveMultipleUniqueCharacter(){
+        int expected=4;
+        UniqueCharacter uniqueCharacter=new UniqueCharacter();
+        assertEquals(expected,uniqueCharacter.getUniqueCharater("POOJA").size());
+    }
 }
